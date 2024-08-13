@@ -5,7 +5,7 @@ on:
       - main
 
 jobs:
-  install:
+  job_one:
     runs-on: ubuntu-latest
     steps:
       - name: Install g++
@@ -19,21 +19,9 @@ jobs:
       - name: Show directory contents
         run: |
           ls
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Change directory to repo root
-        run: |
-          cd /home/runner/work/public-test-repo/public-test-repo
       - name: Build program
         run: |
           sudo g++ src/main.cpp -o test.out
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Change directory to repo root
-        run: |
-          cd /home/runner/work/public-test-repo/public-test-repo
       - name: Run program
         run: |
           sudo ./test.out
