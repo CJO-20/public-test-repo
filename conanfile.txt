@@ -1,0 +1,9 @@
+[requires]
+poco/[>1.13]
+
+[tool_requires]
+cmake/[>3.30]
+
+[generators]
+CMakeDeps
+CMakeToolchain
