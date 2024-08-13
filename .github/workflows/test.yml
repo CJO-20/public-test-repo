@@ -1,0 +1,26 @@
+name: Build and Test Program
+on: [push]
+  branches:
+    - main
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install g++
+        run: |
+          sudo apt install g++
+      - name: Checkout repository
+        uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build program
+        run: |
+          sudo g++ src/main.cpp -o test.out
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run program
+        run: |
+          sudo ./test.out
