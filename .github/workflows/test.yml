@@ -13,6 +13,12 @@ jobs:
           sudo apt install g++
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Print working directory
+        run: |
+          pwd
+      - name: Show directory contents
+        run: |
+          ls
   build:
     runs-on: ubuntu-latest
     steps:
