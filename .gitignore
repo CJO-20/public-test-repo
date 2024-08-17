@@ -36,3 +36,6 @@
 CMakeFiles/*
 Makefile
 CMakeCache.txt
+
+# Build
+build/*
